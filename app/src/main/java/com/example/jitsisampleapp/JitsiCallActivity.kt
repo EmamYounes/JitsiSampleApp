@@ -69,8 +69,8 @@ class JitsiCallActivity : FragmentActivity(), JitsiMeetActivityInterface {
         JitsiMeetActivityDelegate.onNewIntent(intent)
     }
 
-    override fun requestPermissions(p0: Array<out String>?, p1: Int, p2: PermissionListener?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun requestPermissions(permissions: Array<String>, requestCode: Int, listener: PermissionListener) {
+        JitsiMeetActivityDelegate.requestPermissions(this, permissions, requestCode, listener)
     }
 
     override fun onRequestPermissionsResult(
